@@ -1,0 +1,7 @@
+occurrenceID,basisOfRecord,scientificName,eventDate,occurrenceStatus,decimalLatitude,decimalLongitude,geodeticDatum,coordinateUncertaintyInMeters,country,countryCode,continent,institutionCode,catalogNumber,recordedBy,kingdom,taxonRank,individualCount,typeStatus,minimumElevationInMeters,maximumElevationInMeters,modified,dateIdentified
+urn:example:occ:0001,PreservedSpecimen,Quercus robur,2019-05-14,present,48.8566,2.3522,WGS84,30,France,FR,Europe,EXAMPLE-HERB,QROB-1901,J. Dupont,Plantae,species,1,holotype,120,180,2024-01-10,2020-02-01
+urn:example:occ:0002,HumanObservation,Panthera leo,2021-08-03,present,-1.4061,36.9541,WGS84,100,Kenya,KE,Africa,EXAMPLE-ZOO,,A. Njoroge,Animalia,species,2,,560,620,2024-01-10,
+urn:example:occ:0003,MachineObservation,Apis mellifera,2022-06-21,present,52.5200,13.4050,WGS84,15,Germany,DE,Europe,EXAMPLE-SENSOR,SENS-88, hive-monitor-4,Animalia,species,47,,35,40,2024-01-10,
+urn:example:occ:0004,MaterialSample,Carcharodon carcharias,2018-11-30,present,-33.8688,151.2093,WGS84,500,Australia,AU,Oceania,EXAMPLE-MARINE,CC-2018-7,M. Reid,Animalia,species,1,,0,0,2024-01-10,
+urn:example:occ:0005,HumanObservation,Bubo bubo,2020-01-19,absent,59.9139,10.7522,WGS84,250,Norway,NO,Europe,EXAMPLE-BIRD,,K. Larsen,Animalia,species,0,,300,340,2024-01-10,
+urn:example:occ:0006,FossilSpecimen,Tyrannosaurus rex,1935-07-02,present,45.0157,-109.8230,WGS84,1000,United States,US,North America,EXAMPLE-PALEO,TREX-1935-1,H. Osborn,Animalia,species,1,,2100,2150,2024-01-10,1960-05-11

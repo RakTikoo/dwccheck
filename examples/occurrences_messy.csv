@@ -1,0 +1,11 @@
+occurrenceID,basisOfRecord,scientificName,eventDate,occurrenceStatus,decimalLatitude,decimalLongitude,geodeticDatum,coordinateUncertaintyInMeters,country,countryCode,individualCount
+urn:example:bad:0001,sighting,Quercus robur,2019-05-14,present,48.8566,2.3522,WGS84,30,France,FR,1
+urn:example:bad:0002,PreservedSpecimen,Panthera leo,2021-02-30,present,-1.4061,36.9541,WGS84,100,Kenya,KE,2
+urn:example:bad:0003,HumanObservation,Apis mellifera,2022-06-21,present,0.0,0.0,WGS84,15,Germany,DE,4
+urn:example:bad:0001,MachineObservation,Bubo bubo,2020-01-19,present,59.9139,10.7522,WGS84,250,Norway,NO,1
+urn:example:bad:0005,HumanObservation,Carcharodon carcharias,2018-11-30,common,151.2093,-33.8688,WGS84,500,Australia,AU,1
+urn:example:bad:0006,PreservedSpecimen,Tyrannosaurus rex,2999-07-02,present,45.0157,-109.8230,WGS84,1000,France,US,1
+urn:example:bad:0007,HumanObservation,Loxodonta africana,2017-03-15,absent,-2.3333,34.8333,WGS84,80,Kenya,KE,5
+,MaterialSample,Salmo salar,2016-09-09,present,64.1466,-21.9426,WGS84,60,Iceland,IS,1
+urn:example:bad:0009,HumanObservation,Rangifer tarandus,2015-12-24,present,95.0000,190.0000,WGS84,40,Canada,CA,1
+urn:example:bad:0010,HumanObservation,Ursus arctos,2014-04-01,present,46.8523,121.7603,not-a-datum,-5,United States,US,1
