@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dwccheck"
+version = "0.1.0"
+description = "Pre-flight check a Darwin Core occurrence file (CSV/TSV) locally before upload to GBIF, using GBIF's own issue flags."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "RakTikoo" },
+]
+keywords = ["darwin-core", "gbif", "biodiversity", "occurrence", "data-quality", "validation", "dwc"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = []
+
+[project.scripts]
+dwccheck = "dwccheck.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/RakTikoo/dwccheck"
+
+[tool.setuptools]
+packages = ["dwccheck"]
