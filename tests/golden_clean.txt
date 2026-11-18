@@ -1,0 +1,4 @@
+file: examples/occurrences_clean.csv
+rows checked: 6 data rows, 23 columns
+summary: 0 error(s), 0 warning(s)
+result: PASS — no errors found.
