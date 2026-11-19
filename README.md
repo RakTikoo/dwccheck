@@ -1,8 +1,16 @@
-# dwccheck
+# dwccheck — check a Darwin Core occurrence file locally, before you upload it to GBIF
 
 **Check a Darwin Core occurrence file locally — before you upload it to GBIF — and fix what GBIF would flag, using GBIF's own flag names.**
 
 Today, finding out what GBIF thinks of your dataset means uploading it to the GBIF Data Validator website and reading the report there. `dwccheck` runs the subset of those checks that can be decided from the file alone, on your machine, in seconds: required terms present, controlled vocabularies, date sanity and format, coordinate sanity, duplicate occurrenceIDs, and whether `country` and `countryCode` agree with each other. Every per-record finding is reported under the same flag GBIF itself would use — `COORDINATE_INVALID`, `ZERO_COORDINATE`, `BASIS_OF_RECORD_INVALID`, `RECORDED_DATE_INVALID`, `COUNTRY_MISMATCH`, … — with the term and the row, so you can fix the file until the real validator has nothing left to say.
+
+## Install
+
+```console
+$ pip install git+https://github.com/RakTikoo/dwccheck
+```
+
+Requires Python ≥ 3.10. **No dependencies** — standard library only. Everything runs offline; your file never leaves your machine.
 
 ## Demo
 
@@ -46,14 +54,6 @@ result: FAIL — fix the errors before uploading to GBIF.
 
 Row numbers are line numbers in the file (the header is row 1), so you can jump straight to the record; for a record whose quoted field spans several lines, the number is the line where the record ends. Exit code is 0 when there are no errors, 1 when there are, 2 when the file cannot be checked at all — so `dwccheck` drops into a script or CI job as a gate before upload.
 
-## Install
-
-```console
-$ pip install git+https://github.com/RakTikoo/dwccheck
-```
-
-Requires Python ≥ 3.10. **No dependencies** — standard library only. Everything runs offline; your file never leaves your machine.
-
 ## Usage
 
 ```
@@ -64,6 +64,18 @@ dwccheck flags
 - Input is a single occurrence file, CSV or TSV (a `.txt` file's delimiter is sniffed from its first line). UTF-8, with or without a BOM.
 - `--format json` or `--format csv` gives the same findings in machine-readable form (one finding per object/row: row, flag, severity, term, value, message).
 - `dwccheck flags` lists every flag the tool can emit, with GBIF's definition of it. Flags named `DWCCHECK_…` are this tool's own file-level codes (missing column, duplicate ID, unknown header) — GBIF has no per-record flag for those, and the names keep the two apart.
+
+## Use in CI
+
+This repo is also a composite GitHub Action: it installs dwccheck from this repo at the ref you pin, and checks one occurrence file. The step fails when dwccheck exits 1 (errors found — fix them before uploading to GBIF) or 2 (the file cannot be checked at all).
+
+```yaml
+- uses: RakTikoo/dwccheck@main
+  with:
+    path: data/occurrences.csv
+```
+
+Set `format: json` (or `csv`) for machine-readable findings; the default is `text`.
 
 ## What it checks
 

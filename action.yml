@@ -1,0 +1,23 @@
+name: dwccheck
+description: Check a Darwin Core occurrence file locally with GBIF's own flag names, before upload to GBIF
+author: RakTikoo
+inputs:
+  path:
+    description: The occurrence file (CSV or TSV) to check
+    required: true
+  format:
+    description: Report format — text, json or csv
+    required: false
+    default: text
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Install dwccheck from this repo
+      shell: bash
+      run: pip install "git+https://github.com/RakTikoo/dwccheck@${{ github.action_ref || 'main' }}"
+    - name: Run dwccheck
+      shell: bash
+      run: dwccheck check "${{ inputs.path }}" --format "${{ inputs.format }}"

@@ -1,6 +1,6 @@
 ---
 name: dwccheck
-description: Check a Darwin Core occurrence file (CSV or TSV) locally before uploading it to GBIF, using GBIF's own flag names. Use when asked to validate a Darwin Core or GBIF occurrence dataset, pre-check an occurrence file before upload, or find what GBIF would flag — for example "check this occurrence file before I upload to GBIF", "what would GBIF flag in this dataset", or "validate my Darwin Core CSV". Checks required terms, controlled vocabularies, dates, coordinates, duplicate occurrenceIDs, and country versus countryCode agreement — the subset of GBIF's checks that can be decided from the file alone.
+description: Check a Darwin Core occurrence file (CSV or TSV) locally before uploading it to GBIF, using GBIF's own flag names. Use when asked to validate a Darwin Core or GBIF occurrence dataset, pre-check an occurrence file before upload, or find what GBIF would flag — for example "check this occurrence file before I upload to GBIF", "what would GBIF flag in this dataset", or "validate my Darwin Core CSV". Checks required terms, controlled vocabularies, dates, coordinates, duplicate occurrenceIDs, and country versus countryCode agreement — the subset of GBIF's checks that can be decided from the file alone. Not for ham-radio ADIF logs (that is adifcheck) or iCalendar (.ics) files (that is icslint).
 license: MIT
 compatibility: Requires Python 3.10+. No dependencies (standard library only) and runs fully offline; network is needed only to install.
 ---
