@@ -12,6 +12,37 @@ $ pip install git+https://github.com/RakTikoo/dwccheck
 
 Requires Python ≥ 3.10. **No dependencies** — standard library only. Everything runs offline; your file never leaves your machine.
 
+Or from the release files (no registry involved): download
+`dwccheck-0.1.0-py3-none-any.whl` from the
+[v0.1.0 release](https://github.com/RakTikoo/dwccheck/releases/tag/v0.1.0)
+(check it against the release's SHA256SUMS if you want) and install it:
+
+```console
+pip install dwccheck-0.1.0-py3-none-any.whl
+```
+
+Or install straight from GitHub at the v0.1.0 tag:
+
+```console
+pip install git+https://github.com/RakTikoo/dwccheck@v0.1.0
+pipx install git+https://github.com/RakTikoo/dwccheck@v0.1.0
+uv tool install git+https://github.com/RakTikoo/dwccheck@v0.1.0
+```
+
+With Homebrew (macOS/Linux):
+
+```console
+brew tap RakTikoo/tools
+brew install RakTikoo/tools/dwccheck
+```
+
+With Scoop (Windows):
+
+```powershell
+scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
+scoop install dwccheck
+```
+
 ## Demo
 
 A clean file (6 synthetic records, `examples/occurrences_clean.csv`):
