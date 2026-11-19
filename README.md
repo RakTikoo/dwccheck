@@ -93,6 +93,10 @@ Per record, under GBIF's own flag names:
 - **Vocabulary strictness is GBIF's, not the standard's letter.** Where GBIF's parser accepts spelling variants of a vocabulary value, so does `dwccheck`. Where a Darwin Core term has no GBIF occurrence flag (for example `sex` and `lifeStage`), it is not vocabulary-checked in this version rather than checked under an invented flag.
 - **Uncertainty of exactly 0 is not flagged.** GBIF's definition of `COORDINATE_UNCERTAINTY_METERS_INVALID` does not pin a numeric threshold; negative and non-numeric values are flagged, and 0 is left alone rather than guessed at.
 
+## Use with an AI agent
+
+This repo ships a [SKILL.md](SKILL.md) written to the Agent Skills open standard. If your coding agent supports skills, point it at this repo and it can install dwccheck, run it on your occurrence files before upload, and read the findings for you. The skill works when the repo is cloned under its real name (`dwccheck`) — a skill's name must match its folder.
+
 ## Method and sources
 
 The oracles are the published ones, pinned in the tests: the Darwin Core term list (TDWG, `tdwg/dwc` `dist/simple_dwc_vertical.csv`), GBIF's OccurrenceIssue vocabulary and flag definitions, and GBIF's BasisOfRecord / OccurrenceStatus / TypeStatus / Continent enumerations (GBIF API, read 2026-11-18). Country names and codes are ISO 3166-1 via the CC0 `datasets/country-codes` dataset. If GBIF or TDWG changes a vocabulary, the pinning tests fail and the tables get regenerated — run them and see.
