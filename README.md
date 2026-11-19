@@ -1,5 +1,7 @@
 # dwccheck — check a Darwin Core occurrence file locally, before you upload it to GBIF
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/RakTikoo/dwccheck)
+
 **Check a Darwin Core occurrence file locally — before you upload it to GBIF — and fix what GBIF would flag, using GBIF's own flag names.**
 
 Today, finding out what GBIF thinks of your dataset means uploading it to the GBIF Data Validator website and reading the report there. `dwccheck` runs the subset of those checks that can be decided from the file alone, on your machine, in seconds: required terms present, controlled vocabularies, date sanity and format, coordinate sanity, duplicate occurrenceIDs, and whether `country` and `countryCode` agree with each other. Every per-record finding is reported under the same flag GBIF itself would use — `COORDINATE_INVALID`, `ZERO_COORDINATE`, `BASIS_OF_RECORD_INVALID`, `RECORDED_DATE_INVALID`, `COUNTRY_MISMATCH`, … — with the term and the row, so you can fix the file until the real validator has nothing left to say.
@@ -42,6 +44,8 @@ With Scoop (Windows):
 scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
 scoop install dwccheck
 ```
+
+**For agent users:** this repository ships a `SKILL.md` for AI agents. Install it with `npx skills add RakTikoo/dwccheck`.
 
 ## Demo
 

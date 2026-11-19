@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - name: RakTikoo
+title: "dwccheck: check a Darwin Core occurrence file locally, before you upload it to GBIF"
+version: 0.1.0
+date-released: 2026-11-18
+license: MIT
+url: "https://github.com/RakTikoo/dwccheck"
+repository-code: "https://github.com/RakTikoo/dwccheck"
+abstract: >-
+  Checks a Darwin Core occurrence file locally, before GBIF upload, running
+  the subset of GBIF's checks that can be decided from the file alone —
+  required terms, controlled vocabularies, date and coordinate sanity,
+  duplicate occurrenceIDs — and reporting each finding under GBIF's own flag
+  names.
+keywords:
+  - Darwin Core
+  - GBIF
+  - biodiversity
+  - data validation
+  - occurrences
